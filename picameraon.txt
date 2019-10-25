@@ -1,0 +1,20 @@
+Langkah - langkah Enable Pi camera 
+1. sudo apt-get upgrade
+2. sudo apt-get install python-picamera
+3. Create project python dengan perintah 
+" sudo nano name-project.py "
+
+masukkan source code berikut : 
+
+import picamera     # Importing the library for camera module
+from time import sleep
+camera = picamera.PiCamera()    # Setting up the camera
+camera.start_preview()
+sleep(5)
+camera.capture('/home/pi/Desktop/picture/imag.jpg') # Capturing the image
+camera.stop_preview()
+print('Done')
+
+4. ctrl + x ==> enter ( untuk save project python )
+5. jalankan project dengan perintah 
+" sudo python name-project.py "
